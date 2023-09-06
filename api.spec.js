@@ -16,7 +16,7 @@ test('apiTest', () => {
   expect(2).toBe(2)
 })
 
-it('itTest', () => {
+it('itTest', () => {1
   console.log('it---')
   expect('it').toBe('it')
 })

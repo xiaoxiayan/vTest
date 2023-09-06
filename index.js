@@ -1,6 +1,6 @@
 
 
-
+import { readFileSync } from 'fs'
 
 // test it
 // expect toBe
@@ -112,3 +112,11 @@ export function run () {
 }
 
 
+
+export function fff(filePath) {
+
+    const content = readFileSync(filePath, {encoding: 'utf-8'})
+
+    return content + '=> test unit'
+
+}

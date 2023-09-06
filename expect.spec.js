@@ -1,14 +1,21 @@
 import { expect, it } from "vitest";
+import { fff } from './index.js'
+import { readFileSync } from 'fs';
+
+
 
 it('toBe', () => {
   const user = {
     name: 'xxp'
   }
+
+
+
   expect(user.name).toBe('xxp')
 })
 
 
-it.only('toEqual', () => {
+it('toEqual', () => {
   // 对比对象
   const user = {
     name: 'xxp',
@@ -22,6 +29,13 @@ it.only('toEqual', () => {
       a: 'dd'
     }
   })
+})
+
+it.only('fff', () => {
+  const res = fff('./readme.md')
+  const content = readFileSync('./readme.md', { encoding: 'utf-8' })
+
+    expect(res).toBe(`${content}=> test unit`)
 })
 
 it('toBeTruthy', () => {
